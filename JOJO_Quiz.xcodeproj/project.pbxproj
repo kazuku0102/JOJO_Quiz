@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E74B8E3023E08B9F00FF9A2E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74B8E2F23E08B9E00FF9A2E /* Question.swift */; };
 		E781027323E006EC00313790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781027223E006EC00313790 /* AppDelegate.swift */; };
 		E781027523E006EC00313790 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781027423E006EC00313790 /* SceneDelegate.swift */; };
-		E781027723E006EC00313790 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781027623E006EC00313790 /* ViewController.swift */; };
 		E781027A23E006EC00313790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E781027823E006EC00313790 /* Main.storyboard */; };
 		E781027C23E006F000313790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E781027B23E006F000313790 /* Assets.xcassets */; };
 		E781027F23E006F000313790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E781027D23E006F000313790 /* LaunchScreen.storyboard */; };
+		E781028723E0093300313790 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781028623E0093300313790 /* ChoiceViewController.swift */; };
+		E7D526C223E4098100A1985C /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D526C123E4098100A1985C /* QuestionBank.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E74B8E2F23E08B9E00FF9A2E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		E781026F23E006EC00313790 /* JOJO_Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JOJO_Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E781027223E006EC00313790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E781027423E006EC00313790 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E781027623E006EC00313790 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E781027923E006EC00313790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E781027B23E006F000313790 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E781027E23E006F000313790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E781028023E006F000313790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E781028623E0093300313790 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
+		E7D526C123E4098100A1985C /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 		E781027123E006EC00313790 /* JOJO_Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				E74B8E2F23E08B9E00FF9A2E /* Question.swift */,
+				E7D526C123E4098100A1985C /* QuestionBank.swift */,
 				E781027223E006EC00313790 /* AppDelegate.swift */,
 				E781027423E006EC00313790 /* SceneDelegate.swift */,
-				E781027623E006EC00313790 /* ViewController.swift */,
 				E781027823E006EC00313790 /* Main.storyboard */,
+				E781028623E0093300313790 /* ChoiceViewController.swift */,
 				E781027B23E006F000313790 /* Assets.xcassets */,
 				E781027D23E006F000313790 /* LaunchScreen.storyboard */,
 				E781028023E006F000313790 /* Info.plist */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E781027723E006EC00313790 /* ViewController.swift in Sources */,
 				E781027323E006EC00313790 /* AppDelegate.swift in Sources */,
+				E74B8E3023E08B9F00FF9A2E /* Question.swift in Sources */,
 				E781027523E006EC00313790 /* SceneDelegate.swift in Sources */,
+				E7D526C223E4098100A1985C /* QuestionBank.swift in Sources */,
+				E781028723E0093300313790 /* ChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shelly.JOJO-Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shelly.JOJO-Quiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
