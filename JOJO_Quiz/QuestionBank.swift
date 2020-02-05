@@ -29,6 +29,6 @@ class QuestionBank {
         
         list.append(Question(image: "jojo01", text: "地產大亨，人生的贏家，老東西，你的替身最沒用了，唯一沒有死亡的JOJO。", choice01: "伊奇", choice02: "音石明", choice03: "荷爾·荷斯", choice04: "喬瑟夫·喬斯達", answer:4))
         
-        list.append(Question(image: "Dio1", text: "惡人的救世主，長生不老，我不做人了JOJO，无駄无駄无駄！替身名出自塔羅牌世界。", choice01: "卡茲", choice02: "吉良吉影", choice03: "迪奧·布朗度", choice04: "迪亞波羅", answer:3))
+        list.append(Question(image: "Dio1", text: "惡人的救世主，長生不老，我不做人了JOJO，无駄无駄无駄！替身名世界出自塔羅牌。", choice01: "卡茲", choice02: "吉良吉影", choice03: "迪奧·布朗度", choice04: "迪亞波羅", answer:3))
     }
 }

@@ -38,10 +38,9 @@ class ChoiceViewController: UIViewController {
     
     //設定計時器，每隔一秒重複countDown
     override func viewDidAppear(_ animated: Bool) {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ChoiceViewController.countDown), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.countDown), userInfo: nil, repeats: true)
     }
     
-
     @IBAction func buttonTap(_ sender: UIButton) {
         if sender.tag == selectedAnswer{
             print("正解")
@@ -53,6 +52,7 @@ class ChoiceViewController: UIViewController {
         questionNumber += 1
         updateQuestion()
         }
+    
     //按下TheWorld時間暫停三秒
     @IBAction func stopTap(_ sender: UIButton) {
         timer?.fireDate = Date.distantFuture
@@ -68,7 +68,6 @@ class ChoiceViewController: UIViewController {
     }
       
     func updateQuestion() {
-        
         if questionNumber <= allQuestion.list.count - 1{
             print(UIImage(named: (allQuestion.list[questionNumber].questionImage)))
             roleImageView.image = UIImage(named: (allQuestion.list[questionNumber].questionImage))
@@ -90,7 +89,6 @@ class ChoiceViewController: UIViewController {
     func updateImage() {
         scoreLabel.text = "得分: \(score)"
         numberLabel.text = "\(questionNumber + 1)/\(allQuestion.list.count)"
-        
     }
     
     func restart() {
@@ -98,6 +96,7 @@ class ChoiceViewController: UIViewController {
         questionNumber = 0
         seconds = 30
         updateQuestion()
+        viewDidAppear(true)
     }
     
     @objc func countDown(){
@@ -105,10 +104,19 @@ class ChoiceViewController: UIViewController {
         timerLabel.text = "\(seconds)"
         if seconds == 0 {
             timer?.invalidate()
+            timer = nil
+            optionButtonA.isEnabled = true
+            optionButtonB.isEnabled = true
+            optionButtonC.isEnabled = true
+            optionBittonD.isEnabled = true
+            let alert = UIAlertController(title: "挑戰失敗", message: "超過時間了，再玩一次？", preferredStyle: .alert)
+            let restartAction = UIAlertAction(title: "重新開始", style: .default, handler:{action in self.restart()})
+            alert.addAction(restartAction)
+            present(alert, animated: true, completion: nil)
+            }
         }
-        }
-
     }
+
 
     
 
